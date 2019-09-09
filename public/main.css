@@ -1,0 +1,163 @@
+/* Główne */
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:visited{
+  color: white;
+}
+
+/* Kontener */
+#radio{
+  width: 600px;
+  height: 350px;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #304352;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Stacje */
+#stations{
+  width: 300px;
+  height: 350px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.element > .elementDiv{
+  position: relative;
+  height: 60px;
+  width: 290px;
+  margin-bottom: 5px;
+}
+.activeStation{
+  background: rgba(0,0,0,0.3);
+}
+#stations > .element:last-child > .elementDiv{
+  margin-bottom: 0;
+}
+.elementDiv > img {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+}
+.elementDiv > span{
+  position: absolute;
+  line-height: 1.2;
+  top: 50%;
+  transform: translateY(-50%); 
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+               0px 4px 13px rgba(0,0,0,0.1),
+               0px 9px 23px rgba(0,0,0,0.1);
+}
+
+/* Player */
+#playerDiv{
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+#viewer{
+  position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: black;
+  color: white;
+}
+#controls{
+  position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+}
+#controls > .fas{
+  position: absolute;
+  cursor: pointer;
+  color: rgb(200,200,200);
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+  0px 4px 13px rgba(0,0,0,0.1),
+  0px 9px 23px rgba(0,0,0,0.1);
+}
+#controls > .fas:hover{
+  color: rgb(255,255,255);
+}
+#controls > .fas:active{
+  color: rgb(200,200,200);
+}
+#previousButton{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  top:50%;
+  left: 15%;
+  transform: translate(-50%,-50%);
+}
+#nextButton{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  top:50%;
+  right: 15%;
+  transform: translate(50%,-50%);
+}
+#playButton{
+  font-size: 45px;
+  width: 45px;
+  height: 45px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#playButton:active{
+  transform: translate(-50%,-50%) scale(0.95);
+}
+/* Głośność */
+#volumeDiv{
+  position: relative;
+  width: 50px;
+  height: 350px;
+  background: rgba(0,0,0,0.3);
+}
+#volumeIndicator{
+  position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  color: white;
+}
+#volume{
+  position: absolute;
+  height: 20px;
+  width: 300px;
+  bottom: 20px;
+  left: 25%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+}
+#volume:focus{
+  outline: 0;
+}
+
+
+
+
+
+
+
+
